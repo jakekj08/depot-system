@@ -1,6 +1,6 @@
 package depotsystem;
 
-public class menusystem {
+public class MenuSystem {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
