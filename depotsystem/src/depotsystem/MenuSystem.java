@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MenuSystem {
 
-	private static final Scanner S = new Scanner(System.in);
+	private static Scanner S = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -14,13 +14,13 @@ public class MenuSystem {
         
         
         do {
-        System.out.printf("- - Menu - -%n");
-        System.out.printf("1 - View Work Schedule -%n");
-        System.out.printf("2 - Setup Work Schedule -%n");
-        System.out.printf("3 - Move Vehicle -%n");
-        System.out.printf("4 - Option 4 -%n");
-        System.out.printf("E - Exit System -%n");
-        System.out.printf("Pick:  %n");
+        	System.out.printf("-|| Menu ||-%n");
+            System.out.printf("1 -|| View Work Schedule  ||- -%n");
+            System.out.printf("2 -|| Setup Work Schedule ||- -%n");
+            System.out.printf("3 -|| Move Vehicle        ||- -%n");
+            System.out.printf("4 -|| Option 4            ||- -%n");
+            System.out.printf("E -|| Exit System         ||- -%n");
+            System.out.printf("Choose:  %n");
         
         
         choice = S.next().toUpperCase();
