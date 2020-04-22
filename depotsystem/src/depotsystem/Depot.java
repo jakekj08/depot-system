@@ -1,9 +1,11 @@
 package depotsystem;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 
 public class Depot {
-public void logon() {	
+public void logon() throws FileNotFoundException {	
     	Scanner scan = new Scanner (new File ("the\\dir\\Depot.java"));
     	Scanner input = new Scanner (System.in);
     	  System.out.printf("");
