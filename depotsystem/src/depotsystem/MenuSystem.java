@@ -1,5 +1,7 @@
 package depotsystem;
 
+import java.util.Scanner;
+
 public class MenuSystem {
 
 	private static final Scanner S = new Scanner(System.in);
@@ -53,7 +55,7 @@ public class MenuSystem {
         System.out.println("     Goodbye ");
     }
     
-    public GetDepot() {
+    public void GetDepot() {
         
     }
     
