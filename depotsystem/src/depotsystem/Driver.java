@@ -1,10 +1,27 @@
 package depotsystem;
 
-public class Driver {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+public abstract class Driver {
+    //declare protected varibales
+    protected String username;
+    protected String Password;
+    
+    
+    public Driver(String username, String password) {
+        this.username = username;
+        this.Password = password; 
+    }
+    
+    public boolean CheckPassword() {
+        return false;
+        
+    }
+    
+    public boolean IsAvailable() {
+        return false;
+    }
+    
+    public void SetShchedule() {
+        
+    }
 
 }

@@ -1,10 +1,25 @@
 package depotsystem;
 
-public class Vehicle {
+public abstract class Vehicle {
+    protected String make;
+    protected String model;
+    protected String regNo;
+    protected int weight;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+    
+    public Vehicle(String make, String model, String regNo, int weight) {
+        this.make = make;
+        this.model = model;
+        this.regNo = regNo;
+        this.weight = weight;
+    }
+    
+    public boolean IsAvailable() { 
+        return false; 
+    }
+    
+    public void SetSchedule() {
+        
+    }
+    
 }

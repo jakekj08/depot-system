@@ -1,10 +1,10 @@
 package depotsystem;
 
-public class Manager {
+public class Manager extends Driver {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public Manager(String username, String password) {
+        super(username, password);
+    }
 
-	}
-
+    
 }

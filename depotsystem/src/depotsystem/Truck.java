@@ -1,10 +1,12 @@
 package depotsystem;
 
-public class Truck {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+public class Truck extends Vehicle {
+    
+    private int cargoCapacity;
+    
+    public Truck(String make,String model, String regNo, int weight, int cargoCapacity) {
+        super(make, model, regNo, weight);
+        this.cargoCapacity = cargoCapacity;
+}
+    
 }
