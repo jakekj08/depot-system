@@ -1,9 +1,11 @@
 package depotsystem;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 
 public class Depot {
-public void logon() {	
+public void logon() throws FileNotFoundException {	
     	Scanner scan = new Scanner (new File ("the\\dir\\Depot.java"));
     	Scanner input = new Scanner (System.in);
     	  System.out.printf("");
@@ -12,8 +14,15 @@ public void logon() {
     	    System.out.printf("Please enter your Password: ");
     	    String password = scan.nextLine();
     	    
-    	    String Inputusername = input.nextLine();
+    	    String InputUsername = input.nextLine();
     	    String InputPass = input.nextLine();
+    	    
+    	    	if (InputUsername.equals(username) && InputPass.equals(password)) {
+    	    		System.out.print("Login successful");
+    	    			} 
+    	    	else {
+    	    		System.out.print("Login unsuccessful");			
+    	    	}
     }
     
        public Vehicle GetVehicle() {
