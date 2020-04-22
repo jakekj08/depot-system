@@ -14,8 +14,15 @@ public void logon() throws FileNotFoundException {
     	    System.out.printf("Please enter your Password: ");
     	    String password = scan.nextLine();
     	    
-    	    String Inputusername = input.nextLine();
+    	    String InputUsername = input.nextLine();
     	    String InputPass = input.nextLine();
+    	    
+    	    	if (InputUsername.equals(username) && InputPass.equals(password)) {
+    	    		System.out.print("Login successful");
+    	    			} 
+    	    	else {
+    	    		System.out.print("Login unsuccessful");			
+    	    	}
     }
     
        public Vehicle GetVehicle() {
