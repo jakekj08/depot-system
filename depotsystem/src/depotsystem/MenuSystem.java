@@ -9,6 +9,8 @@ public class MenuSystem {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+	
+		
 		System.out.printf("-//- Welcome to the E-Depot System -//- -%n");
         String choice = "";
         

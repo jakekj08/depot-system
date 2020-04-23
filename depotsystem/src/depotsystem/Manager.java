@@ -1,16 +1,23 @@
 package depotsystem;
 
 public class Manager extends Driver {
-	private Depot[] AccountArray;
+	
+
+
 	public Manager(String username, String password) {
 		super(username, password);
 		// TODO Auto-generated constructor stub
 	}
 
+
+	private Depot[] AccountArray;
+	
+
 	public void accounts() {
-		AccountArray = new Depot[3];
+		AccountArray = new Depot[1];
 		
-		AccountArray = new Depot(guydob, guydob);
+		AccountArray[0] = new Depot("guydob", "1234");
+		AccountArray[1] = new Depot(username, Password);
 	}
 }
 	
