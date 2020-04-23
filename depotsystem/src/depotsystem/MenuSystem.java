@@ -1,5 +1,7 @@
 package depotsystem;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class MenuSystem {
@@ -8,10 +10,17 @@ public class MenuSystem {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-	Depot log = new Depot();
+		String fileName = "WorkSchedule.csv";
+	     File file = new File(fileName);
+		
+	 Depot log = new Depot();
 	log.LogOn();
 		
+	 
+     //Code to view work schedule which doesnt work as intended
+     //loadSchedule();
+     
+     
 		System.out.printf("-//- Welcome to the E-Depot System -//- -%n");
         String choice = "";
         
@@ -29,10 +38,21 @@ public class MenuSystem {
         choice = S.next().toUpperCase();
         
         switch (choice) {
-            case "1" : {
-            	System.out.println("Work Schedule");
-                break;
+        case "1" : {
+            try {
+                Scanner inputStream = new Scanner(file);
+                while (inputStream.hasNext()) {
+                    String data = inputStream.next();
+                    System.out.println(data);
+                }
+                inputStream.close();
+
+            } catch (FileNotFoundException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
             }
+            break;
+        }
             
             case "2" : {
             	System.out.println("Setup work schedule");
@@ -60,6 +80,6 @@ public class MenuSystem {
     
     public void GetDepot() {
         
-    }
+    } 
     
 }
