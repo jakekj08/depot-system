@@ -11,43 +11,75 @@ public class Depot {
 	private Manager Credentials;
 	
 
-public void Depot(String username, String password) {
-		// TODO Auto-generated constructor stub
-	this.UserName = username;
-	this.PassWord = password;
-	
-	}
+public void LogOn() {
+	String UsernameG;
+    String PasswordG;
+    String UsernameS;
+    String PasswordS;
+    String UsernameK;
+    String PasswordK;
+    boolean authenticate = true;
+    PasswordG = "_Glyn";
+    UsernameG = "Glyn";
+    UsernameS = "Sorren";
+    PasswordS = "_Sorren";
+    UsernameK = "Kirsty";
+    PasswordK = "_Kirsty";
 
+    
+    
+    while (authenticate = true) {
+    Scanner input1 = new Scanner(System.in);
+    System.out.println("Enter Username : ");
+    String username = input1.next();
 
-/*public void logon() throws FileNotFoundException {	
-	 Authenticate = false;
-	Credentials = new Manager(toString(), PassWord);
+    Scanner input2 = new Scanner(System.in);
+    System.out.println("Enter Password : ");
+    String password = input2.next();
+
+    if (username.equals(UsernameG) && password.equals(PasswordG)) {
+
+        System.out.println("Access Granted! Welcome!");
+        authenticate = false;
+        break;
+    }
+
+    else if (username.equals(UsernameG)) {
+        System.out.println("Invalid Password!");
+    } else if (password.equals(PasswordG)) {
+        System.out.println("Invalid Username!");
+    } 
+    
+    if (username.equals(UsernameS) && password.equals(PasswordS)) {
+
+        System.out.println("Access Granted! Welcome!");
+        authenticate = false;
+        break;
+    }
+
+    else if (username.equals(UsernameS)) {
+        System.out.println("Invalid Password!");
+    } else if (password.equals(PasswordS)) {
+        System.out.println("Invalid Username!");
+    } 
+    
+    
+    if (username.equals(UsernameK) && password.equals(PasswordK)) {
+
+        System.out.println("Access Granted! Welcome!");
+        authenticate = false;
+        break;
+    }
+
+    else if (username.equals(UsernameK)) {
+        System.out.println("Invalid Password!");
+    } else if (password.equals(PasswordK)) {
+        System.out.println("Invalid Username!");
+    } 
+}
+}
 	
-    	Scanner scan = new Scanner (new File ("the\\dir\\Depot.java"));
-    	Scanner input = new Scanner (System.in);
-    	  System.out.printf("");
-    	  System.out.printf("Please enter your UserName: ");
-    	  String username = scan.nextLine();
-    	    System.out.printf("Please enter your Password: ");
-    	    String password = scan.nextLine();
-    	    
-    	    Authenticate = Credentials.accounts(username, password);
-    	    
-    	    if (Authenticate) {
-    	    	this.UserName = username;
-    	    } 
-    	    
-    	    
-    	    String InputUsername = input.nextLine();
-    	    String InputPass = input.nextLine();
-    	    
-    	    	if (InputUsername.equals(username) && InputPass.equals(password)) {
-    	    		System.out.print("Login successful");
-    	    			} 
-    	    	else {
-    	    		System.out.print("Login unsuccessful");			
-    	    	}
-    } */
+	
     
        public Vehicle GetVehicle() {
        return null;

@@ -9,8 +9,8 @@ public class MenuSystem {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-	Manager log = new Manager(null, null);
-	log.Accounts();
+	Depot log = new Depot();
+	log.LogOn();
 		
 		System.out.printf("-//- Welcome to the E-Depot System -//- -%n");
         String choice = "";
