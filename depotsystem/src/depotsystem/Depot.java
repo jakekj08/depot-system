@@ -10,6 +10,7 @@ public class Depot {
 	private boolean Authenticate;
 	private Manager Credentials;
 	
+
 public void Depot(String username, String password) {
 		// TODO Auto-generated constructor stub
 	this.UserName = username;
@@ -18,8 +19,8 @@ public void Depot(String username, String password) {
 	}
 
 
-public void logon() throws FileNotFoundException {	
-	Authenticate = false;
+/*public void logon() throws FileNotFoundException {	
+	 Authenticate = false;
 	Credentials = new Manager(toString(), PassWord);
 	
     	Scanner scan = new Scanner (new File ("the\\dir\\Depot.java"));
@@ -34,7 +35,7 @@ public void logon() throws FileNotFoundException {
     	    
     	    if (Authenticate) {
     	    	this.UserName = username;
-    	    }
+    	    } 
     	    
     	    
     	    String InputUsername = input.nextLine();
@@ -46,7 +47,7 @@ public void logon() throws FileNotFoundException {
     	    	else {
     	    		System.out.print("Login unsuccessful");			
     	    	}
-    }
+    } */
     
        public Vehicle GetVehicle() {
        return null;
