@@ -5,7 +5,7 @@ public class Vehicle extends MenuSystem {
     private String[] model;
     private String[] regNo;
     private int[] weight;
-    //Defining data types
+    //Defining differnt data types
       
 
     public Vehicle(String[] make, String[] model, String[] regNo, int[] weight) {
@@ -13,7 +13,7 @@ public class Vehicle extends MenuSystem {
         this.model = model;
         this.regNo = regNo;
         this.weight = weight;
-
+    
     
     }
     public Truck[] VehicleData; {
