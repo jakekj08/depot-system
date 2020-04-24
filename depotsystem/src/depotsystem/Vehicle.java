@@ -8,7 +8,7 @@ public class Vehicle extends MenuSystem {
 
       
 
-    public Vehicle(String[] make, String model, String regNo, int weight) {
+    public void Vehicle(String[] make, String model, String regNo, int weight) {
         this.make = make;
         this.model = model;
         this.regNo = regNo;
@@ -16,8 +16,8 @@ public class Vehicle extends MenuSystem {
 
     
     }
-    public Vehicle[] VehicleData; {
-    VehicleData = new Vehicle[2];
+    public Truck[] VehicleData; {
+    VehicleData = (Truck[]) new Vehicle[2];
     
     String[] CarMake = new String[] {"Audi", "BMW", "Ford", "Mazda"};
     CarMake = make;

@@ -1,21 +1,30 @@
 package depotsystem;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class MenuSystem {
 
 	private static Scanner S = new Scanner(System.in);
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		String fileName = "WorkSchedule.csv";
 	     File file = new File(fileName);
 		
 	 Depot log = new Depot();
 	log.LogOn();
-		
+	//Vehicle truck = new Vehicle();
+   // truck.Vehicle(args, fileName, fileName, 0);
 	 
      //Code to view work schedule which doesnt work as intended
      //loadSchedule();
@@ -55,7 +64,24 @@ public class MenuSystem {
         }
             
             case "2" : {
-            	System.out.println("Setup work schedule");
+            	BufferedReader csvReader = new BufferedReader(new FileReader(fileName));
+            	while ((fileName = csvReader.readLine()) != null) {
+            	    String[] data = fileName.split(",");
+            	    // do something with the data
+            	    File csvFile = new File(fileName);
+            	   
+            	    
+            	    SaveEntry(fileName, fileName, fileName, fileName, fileName, fileName);
+            	            
+            	            
+            	   
+            	    	
+            	    	
+            	    
+            	    
+            	    
+            	}
+            	csvReader.close();
                 break;
             }
             
@@ -81,5 +107,37 @@ public class MenuSystem {
     public void GetDepot() {
         
     } 
+    
+    public static void SaveEntry(String client, String start, String end, String vehicle, String driver, String WorkFile) {
+	
+    	try
+    	{
+    		FileWriter f = new FileWriter(WorkFile, true);
+    		BufferedWriter b = new BufferedWriter (f);
+    		PrintWriter p = new PrintWriter(b);
+    		Scanner scan = new Scanner(System.in);
+    		
+    		System.out.println("What is the clients name?");
+    		client = scan.next();
+    		System.out.println("What is the start date?");
+    		start = scan.next();
+    		System.out.println("What is the end date?");
+    		end = scan.next();
+    		System.out.println("What is the vehicle being used?");
+    		vehicle = scan.next();
+    		System.out.println("What is the name of the driver?");
+    		driver = scan.next();
+    		p.println(client+","+start+","+end+","+vehicle+","+driver);
+    		
+    		System.out.println("Record saved!");
+    		
+    		
+    	}
+    catch(Exception E)
+    	{
+    	System.out.println("Error occured, record not saved.");
+    	}
+    
+    }
     
 }
