@@ -17,33 +17,32 @@ public class MenuSystem {
 	private static Scanner S = new Scanner(System.in);
 	
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
+		
 		String fileName = "WorkSchedule.csv";
 	     File file = new File(fileName);
-		
+	     String filepath = "WorkSchedule.csv";
 	 Depot log = new Depot();
 	log.LogOn();
-	//Vehicle truck = new Vehicle();
-   // truck.Vehicle(args, fileName, fileName, 0);
-	 
-     //Code to view work schedule which doesnt work as intended
-     //loadSchedule();
-     
-     
-		System.out.printf("-//- Welcome to the E-Depot System -//- -%n");
+	//Connecting this class to depot to get the login method from depot.
+	
+	
+	String client = null;
+	String start = null;
+	String end = null;
+	String vehicle = null;
+	String driver = null;
+	//Strings for the work schedule insert
+		System.out.printf("Successfully logged in!%n");
         String choice = "";
         
         
-        do {
+        
 
-        	System.out.printf("-|| Menu ||-%n");
             System.out.printf("1 -|| View Work Schedule  ||- -%n");
             System.out.printf("2 -|| Setup Work Schedule ||- -%n");
-            System.out.printf("3 -|| Move Vehicle        ||- -%n");
-            System.out.printf("4 -|| Option 4            ||- -%n");
-            System.out.printf("E -|| Exit System         ||- -%n");
-            System.out.printf("Choose:  %n");
-     
+            System.out.printf("3 -|| Log out        ||- -%n");
+            System.out.printf("4 -|| Exit system        ||- -%n");          
+     //Menu system
         choice = S.next().toUpperCase();
         
         switch (choice) {
@@ -62,7 +61,7 @@ public class MenuSystem {
             }
             break;
         }
-            
+            //Only views the work schedule.
             case "2" : {
             	BufferedReader csvReader = new BufferedReader(new FileReader(fileName));
             	while ((fileName = csvReader.readLine()) != null) {
@@ -71,51 +70,43 @@ public class MenuSystem {
             	    File csvFile = new File(fileName);
             	   
             	    
-            	    SaveEntry(fileName, fileName, fileName, fileName, fileName, fileName);
-            	            
-            	            
-            	   
-            	    	
-            	    	
-            	    
-            	    
-            	    
-            	}
+            	    SaveEntry(client, start, end, vehicle, driver, filepath);
+            	    }
             	csvReader.close();
                 break;
+                //This calls the method which updates the file.
             }
             
-            case "3" : {
-            	System.out.println("Move vehicle");
-                break;
+                case "3" : {
+            	System.out.println("Thank you for using the system!");
+            	main(args);
+            	//Used to log out
             }
-            
-            case "4" : {
-            	System.out.println("Four");
-                break;
-            }
+                case "4" : {
+                	System.out.println("Thank you for using the system.");
+                	System.exit(0);
+                } //Used to exit the system
             
         }
         
         }
     
-    while (!choice.equals("E"));
-        System.out.println("-||- System Exit -||-");
-        System.out.println("     ~||~ Goodbye ~||~ ");
-    }
+    
     
     public void GetDepot() {
         
     } 
     
-    public static void SaveEntry(String client, String start, String end, String vehicle, String driver, String WorkFile) {
+    public static void SaveEntry(String client, String start, String end, String vehicle, String driver, String filepath) {
 	
-    	try
+     try
     	{
-    		FileWriter f = new FileWriter(WorkFile, true);
+    		FileWriter f = new FileWriter(filepath,true);
     		BufferedWriter b = new BufferedWriter (f);
     		PrintWriter p = new PrintWriter(b);
     		Scanner scan = new Scanner(System.in);
+    		//This is a set up to read the file, and be able to write inside of it.
+    		
     		
     		System.out.println("What is the clients name?");
     		client = scan.next();
@@ -128,6 +119,10 @@ public class MenuSystem {
     		System.out.println("What is the name of the driver?");
     		driver = scan.next();
     		p.println(client+","+start+","+end+","+vehicle+","+driver);
+    		//Each input is scanned and then inserted into the file.
+    		p.flush();
+    		p.close();
+    		
     		
     		System.out.println("Record saved!");
     		
@@ -137,7 +132,7 @@ public class MenuSystem {
     	{
     	System.out.println("Error occured, record not saved.");
     	}
-    
+    	
     }
     
 }

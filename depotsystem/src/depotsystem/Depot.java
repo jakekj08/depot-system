@@ -25,18 +25,19 @@ public void LogOn() {
     PasswordS = "_Sorren";
     UsernameK = "Kirsty";
     PasswordK = "_Kirsty";
-
+    //These strings are the different accounts that can be used, each have the same functionality and rights.
     
     
     while (authenticate = true) {
     Scanner input1 = new Scanner(System.in);
     System.out.println("Enter Username : ");
     String username = input1.next();
-
+    
     Scanner input2 = new Scanner(System.in);
     System.out.println("Enter Password : ");
     String password = input2.next();
-
+//Scans the output
+    
     if (username.equals(UsernameG) && password.equals(PasswordG)) {
 
         System.out.println("Access Granted! Welcome!");
@@ -48,7 +49,7 @@ public void LogOn() {
         System.out.println("Invalid Password!");
     } else if (password.equals(PasswordG)) {
         System.out.println("Invalid Username!");
-    } 
+    } //shows if the user does not insert the correct login information
     
     if (username.equals(UsernameS) && password.equals(PasswordS)) {
 
@@ -61,7 +62,7 @@ public void LogOn() {
         System.out.println("Invalid Password!");
     } else if (password.equals(PasswordS)) {
         System.out.println("Invalid Username!");
-    } 
+    } //shows if the user does not insert the correct login information
     
     
     if (username.equals(UsernameK) && password.equals(PasswordK)) {
@@ -75,7 +76,7 @@ public void LogOn() {
         System.out.println("Invalid Password!");
     } else if (password.equals(PasswordK)) {
         System.out.println("Invalid Username!");
-    } 
+    } //shows if the user does not insert the correct login information
 }
 }
 	

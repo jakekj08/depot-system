@@ -5,7 +5,7 @@ public class Manager extends Driver {
 
 	public Manager(String username, String password) {
 		super(username, password);
-		// TODO Auto-generated constructor stub
+		//Was going to be used for account storage.
 	}
 
 	

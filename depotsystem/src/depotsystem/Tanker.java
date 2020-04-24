@@ -9,6 +9,7 @@ public class Tanker extends Vehicle{
         super(make, model, regNo, weight);
         this.liquidCapacity = liquidCapacity;
         this.liquidType = liquidType;
+    //Information for Tankers.
     }
     
 }

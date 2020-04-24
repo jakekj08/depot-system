@@ -16,7 +16,10 @@ public class Vehicle extends MenuSystem {
     
     
     }
-    public Truck[] VehicleData; {
+    public Vehicle(String[] make2, String model2, String regNo2, int weight2) {
+		// TODO Auto-generated constructor stub
+	}
+	public Truck[] VehicleData; {
     VehicleData = (Truck[]) new Vehicle[4];
     
     String[] CarMake = new String[] {"Audi", "BMW", "Ford", "Mazda"};	
